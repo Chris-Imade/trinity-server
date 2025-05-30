@@ -1,10 +1,18 @@
 require("dotenv").config();
 const express = require("express");
 const nodemailer = require("nodemailer");
+const cors = require("cors");
 const app = express();
 
 // Middleware
 app.use(express.json());
+app.use(
+  cors({
+    origin: "*", // Allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 // Email transporter configuration
 const transporter = nodemailer.createTransport({
