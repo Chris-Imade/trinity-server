@@ -2,6 +2,14 @@
 
 This API provides endpoints for handling contact form submissions and newsletter subscriptions for Trinity Relief Initiative for Returnees and Migrants.
 
+## Base URL
+
+All API endpoints are relative to the base URL:
+
+```
+https://trinity-server.onrender.com
+```
+
 ## Setup
 
 1. Clone the repository
@@ -38,7 +46,7 @@ npm start
 
 Submit a contact form message.
 
-**Endpoint:** `POST /api/contact`
+**Endpoint:** `POST https://trinity-server.onrender.com/api/contact`
 
 **Request Body:**
 
@@ -76,7 +84,7 @@ Submit a contact form message.
 
 Subscribe to the newsletter.
 
-**Endpoint:** `POST /api/newsletter`
+**Endpoint:** `POST https://trinity-server.onrender.com/api/newsletter`
 
 **Request Body:**
 
